@@ -74,7 +74,7 @@ class MissionController extends Controller
      //    $mission->motif = $request->get('motif');
      //     $mission->signataire = $request->get('signataire');
 
-
+        // commentaire
           if ($request->hasFile('fichier_joint')){
            // dd("bonjour");
            // echo 'bbbbbb';

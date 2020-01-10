@@ -2,17 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\CategorieMission;
+use App\Models\Agent;
 use Illuminate\Http\Request;
 use App\Repositories\Repository;
 
 
-class CategorieMissionController extends Controller
+class AgentController extends Controller
 {  
 
     protected $model;
 
-    public function __construct(CategorieMission $exemple){
+    public function __construct(Agent $exemple){
         $this->model = new Repository($exemple);
     }
     /**

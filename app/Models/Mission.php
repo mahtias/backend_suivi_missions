@@ -20,17 +20,24 @@ class Mission extends Model
 
     // ];
 
-    public function imputations(){
-        return $this->belongsTo(ImputationMission::class, 'mission_id');
-    }
+    // public function imputations(){
+    //     return $this->belongsTo(ImputationMission::class, 'mission_id');
+    // }
     // relation entre categorie mission et mission 
 
     public function categorie_mission()
     {
-        return $this->belongsTo(categorieMission::class, 'categorie_missions_id','id');
+        return $this->belongsTo(CategorieMission::class, 'categorie_missions_id','id');
 
     }
- //  public function exrcice_budegtaires(){
- //     return $this->belongsTo(ExerciceBudgetaire::class, 'exercice_budgetaire_id');
- // }
+
+    public function historique_missions()
+    {
+      return $this->hasMany(HistoriqueMission::class, 'mission','id');
+      // ->
+      // with('missions')
+      // ->latest()->first();
+
+    }
+
 }

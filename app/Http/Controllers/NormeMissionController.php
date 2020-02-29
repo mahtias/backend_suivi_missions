@@ -49,6 +49,7 @@ class NormeMissionController extends Controller
     public function store(Request $request)
     {
 
+
         if ($request->hasFile('fichier_joint')){
             $fullName=$request->file('fichier_joint')->getClientOriginalName();
             $name=pathinfo($fullName,PATHINFO_FILENAME);
@@ -71,6 +72,11 @@ class NormeMissionController extends Controller
 
                //model sans relation
    //return $this->model->create($request->only($this->model->getModel()->fillable));
+
+
+               //model sans relation
+   return $this->model->create($request->only($this->model->getModel()->fillable));
+
          // fin model sans relation
 
 
@@ -109,6 +115,7 @@ class NormeMissionController extends Controller
      */
     public function update(Request $request, $id)
     {
+
          $norme = NormeMission::find($request->get('id'));
 
            if ($request->hasFile('fichier_joint')){
@@ -133,6 +140,11 @@ class NormeMissionController extends Controller
          //model sans relation
       // $this->model->update($request->only($this->model->getModel()->fillable), $id);
       //  return $this->model->show($id);
+
+         //model sans relation
+     $this->model->update($request->only($this->model->getModel()->fillable), $id);
+         return $this->model->show($id);
+
          // fin model sans relation
 
   

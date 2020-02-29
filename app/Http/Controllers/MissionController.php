@@ -24,7 +24,11 @@ class MissionController extends Controller
     {  
         //
         return Mission::with(['historique_missions' => function ($query) {
+
             $query->orderBy('id', 'desc')->get();
+
+            $query->latest()->get();
+
         }])
         ->with('categorie_mission')
         ->withCount('historique_missions')

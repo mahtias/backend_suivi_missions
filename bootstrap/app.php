@@ -28,7 +28,12 @@ $app = new Laravel\Lumen\Application(
  $app->withEloquent();
  $app->configure('cors');
 
+ $app->register(Irazasyed\Larasupport\Providers\ArtisanServiceProvider::class);
+
+
 /*
+
+
 |--------------------------------------------------------------------------
 | Register Container Bindings
 |--------------------------------------------------------------------------
@@ -38,6 +43,12 @@ $app = new Laravel\Lumen\Application(
 | your own bindings here if you like or you can make another file.
 |
 */
+
+// if(env('APP_PUBLIC') != NULL){
+//   $app->bind('path.public', function() {
+//       return base_path().env('APP_PUBLIC');
+//   });
+// }
 
 $app->singleton(
     Illuminate\Contracts\Debug\ExceptionHandler::class,

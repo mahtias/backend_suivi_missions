@@ -9,7 +9,8 @@
         "laravel/lumen-framework": "5.6.*",
         "vlucas/phpdotenv": "~2.2",
         "flipbox/lumen-generator": "^5.6",
-        "barryvdh/laravel-cors": "^0.11.4"
+        "barryvdh/laravel-cors": "^0.11.4",
+         "irazasyed/larasupport": "^1.0"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
@@ -34,7 +35,9 @@
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
+
     "config": {
+       
         "optimize-autoloader": true
     }
 }

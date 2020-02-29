@@ -1,5 +1,6 @@
 <?php
 
+
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -29,7 +30,8 @@ $router->post('add_imputation' , 'ImputationMissionController@store');
 $router->put('update_imputation/{id}', 'ImputationMissionController@update');
 $router->delete('supprimer_imputation/{id}' ,'ImputationMissionController@destroy');
 
-
+// ûpload file
+$router->post('add_upload', 'UploadController@upload');
 
 
 // route pour mission
@@ -37,4 +39,29 @@ $router->get('list_mission', 'MissionController@index');
 $router->post('add_mission' , 'MissionController@store');
 $router->put('update_mission/{id}', 'MissionController@update');
 $router->delete('supprimer_mission/{id}' ,'MissionController@destroy');
+
+
+// norme de mission
+$router->get('liste_norme_mission', 'NormeMissionController@index');
+$router->post('add_norme_mission' , 'NormeMissionController@store');
+$router->put('update_norme_mission/{id}', 'NormeMissionController@update');
+$router->delete('supprimer_norme_mission/{id}' ,'NormeMissionController@destroy');
+
+
+// historique mision
+
+ $router->get('liste_historique_mission', 'HistoriqueMissionController@index');
+
+$router->post('add_historique_mission' , 'HistoriqueMissionController@store');
+
+ $router->put('update_historique_mission/{id}', 'HistoriqueMissionController@update');
+
+ $router->delete('supprimer_historique_mission/{id}' ,'HistoriqueMissionController@destroy');
+
+
+
+/**
+ *
+ */
+
 });

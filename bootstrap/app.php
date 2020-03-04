@@ -1,5 +1,7 @@
 <?php
 
+//use Irazasyed\Larasupport\Providers\ArtisanServiceProvider;
+
 require_once __DIR__.'/../vendor/autoload.php';
 
 try {
@@ -27,9 +29,6 @@ $app = new Laravel\Lumen\Application(
 
  $app->withEloquent();
  $app->configure('cors');
-
- $app->register(Irazasyed\Larasupport\Providers\ArtisanServiceProvider::class);
-
 
 /*
 
@@ -60,6 +59,8 @@ $app->singleton(
     App\Console\Kernel::class
 );
 
+$app->register(Irazasyed\Larasupport\Providers\ArtisanServiceProvider::class);
+
 /*
 |--------------------------------------------------------------------------
 | Register Middleware
@@ -70,6 +71,7 @@ $app->singleton(
 | route or middleware that'll be assigned to some specific routes.
 |
 */
+//$app->register(Irazasyed\Larasupport\Providers\ArtisanServiceProvider::class);
 
 // $app->middleware([
 //    App\Http\Middleware\ExampleMiddleware::class

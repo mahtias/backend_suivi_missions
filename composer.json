@@ -10,7 +10,8 @@
         "vlucas/phpdotenv": "~2.2",
         "flipbox/lumen-generator": "^5.6",
         "barryvdh/laravel-cors": "^0.11.4",
-         "irazasyed/larasupport": "^1.0"
+        "irazasyed/larasupport": "1.0"
+        
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
@@ -27,6 +28,7 @@
             "tests/",
             "database/"
         ]
+        
     },
     "scripts": {
         "post-root-package-install": [
@@ -40,4 +42,6 @@
        
         "optimize-autoloader": true
     }
+    
+    
 }

@@ -18,10 +18,10 @@ $router->get('/', function () use ($router) {
 
 $router->group(['prefix'=>'api'], function() use($router){
 
-$router->get('liste_agent', 'AgentController@index');
-$router->post('add_agent' , 'AgentController@store');
-$router->put('update_agent/{id}', 'AgentController@update');
-$router->delete('supprimer_agent/{id}' ,'AgentController@destroy');
+    $router->get('liste_categorie_mission', 'CategorieMissionController@index');
+    $router->post('add_categorie_mission' , 'CategorieMissionController@store');
+    $router->put('update_categorie_mission/{id}', 'CategorieMissionController@update');
+    $router->delete('supprimer_categorie_mission/{id}' ,'CategorieMissionController@destroy');
 
 // route imputtation
 
@@ -33,7 +33,7 @@ $router->post('add_upload', 'UploadController@upload');
  *
  */
 
-<<<<<<< HEAD
+
 // route pour mission
 $router->get('list_mission', 'MissionController@index');
 $router->post('add_mission' , 'MissionController@store');
@@ -64,6 +64,5 @@ $router->post('add_historique_mission' , 'HistoriqueMissionController@store');
  *
  */
 
-=======
->>>>>>> 32f4ef4663269f752823e93b20cb0e582975fae6
+
 });
